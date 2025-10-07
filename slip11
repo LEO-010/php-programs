@@ -1,0 +1,62 @@
+-------------------------------------------------------------------------------slip 11_1---------------------------------------------------------------------------------------------------------------------------------------------
+<!-- 1. Create a button with different style (Secondary, Primary, Success, Error, Info, Warning, 
+Danger) using BootStrap. -->
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <button class="btn btn-primary">PRIMARY</button>
+    <button class="btn btn-secondary">SECONDARY</button>
+    <button class="btn btn-success">SUCCESS</button>
+    <button class="btn btn-info">INFO</button>
+    <button class="btn btn-warning">WARNING</button>
+    <button class="btn btn-danger">DANGER</button>
+    </body>
+</html>
+
+-------------------------------------------------------------------------------slip 11_2 12_2(form.php)-----------------------------------------------------------------------------------------------------------------------
+<!-- 2.Write a PHP script for the following: Design a form to accept two numbers from the user. 
+Give options to choose the arithmetic operation (use radio buttons). Display the result on the 
+next form. (Use the concept of function and default parameters. Use ‘include’ construct or 
+require statement).  -->
+<html>
+    <body>
+        <form method="post" action="result.php">
+        Enter first number:<input type="text" name="t1"><br>
+        Enter second number:<input type="text" name="t2"><br>
+        Select Operation<br>
+        Addition(+)<input type="radio" name="r" value="1"><br>
+        Substraction(-)<input type="radio" name="r" value="2"><br>
+        Multiplication(*)<input type="radio" name="r" value="3"><br>
+        Division(/)<input type="radio" name="r" value="4"><br>
+        <input type="submit" value="submit">
+        </form>
+    </body>
+</html>
+*******************************************(result.php)******************************************
+<?php
+include'logic.php';
+$a=$_POST['t1'];
+$b=$_POST['t2'];
+$ch=$_POST['r'];
+$result=calculate($a,$b,$ch);
+?>
+**************************************(logic.php)*******************************************
+<?php
+function calculate($a=1,$b=1,$ch="1")
+{
+    switch($ch)
+    {
+        case 1:echo"Addition:". $a+$b;
+            break;
+        case 2:echo"Substraction:". $a-$b;
+            break;
+        case 3:echo"Multiplication:". $a*$b;
+            break;
+        case 4:echo"Division:". $a/$b;
+            break;
+    }
+}
+?>
