@@ -1,0 +1,78 @@
+------------------------------------------------------------------------------------------slip 18_1----------------------------------------------------------------------------------------------------------------------------------
+<html>
+    <head>
+        <style>
+            nav{
+                height: 50px;
+                width: 1000px;
+                background-color: lightgreen;
+            }
+            .home {
+                font-size: 22px;
+            }
+            .java{
+                font-size: 22px;
+                margin: 10px;
+            }
+            .html{
+                font-size: 22px;
+                margin: 10px;
+            }
+            .css{
+                font-size: 22px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="#" class="home">Home</a>
+            <a href="#" class="java">Java</a>
+            <a href="#" class="html">HTML</a>
+            <a href="#" class="css">CSS</a>
+        </nav>
+    </body>
+</html>
+------------------------------------------------------------------------------------------------slip 18_2--------------------------------------------------------------------------------------------------------------------------------
+<!-- 2.Write a menu driven program to perform the following operations on an associative array 
+1. Reverse the order of each element’s key-value pair. result=array_flip($a1); 
+2. Traverse the element in an array in random order. foreach ($colors as $x)  
+{ 
+echo "$x <br>"; 
+}
+3. Convert the array elements into individual variables. extract($a)
+4. Display the elements of an array along with key.       echo -->
+<html>
+    <body>
+        <form method="post" action="#">
+        Enter your choice:<input type="text" name="t1"><br>
+        1)Reverse <br>
+        2)Traverse<br>
+        3)Convert into variable<br>
+        4)Display<br>
+        <input type="submit" value="submit">
+        </form>
+    </body>
+</html>
+<?php
+$ch=$_POST['t1'];
+$a=array("Sagar"=>"31","Vicky"=>"41","Leena"=>"39","Ramesh"=>"40");
+switch($ch)
+{
+    case 1:$rev=array_flip($a);
+            print_r($rev);
+        break;
+    case 2: foreach ($a as $x)  
+{ 
+echo "$x <br>"; 
+}
+        break;
+    case 3:extract($a);
+        echo $Sagar .":".$Vicky.":". $Leena.":". $Ramesh;
+        break;
+    case 4:$d=print_r($a);
+        break;
+}
+?>
+
+
