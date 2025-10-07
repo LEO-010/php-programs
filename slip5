@@ -1,0 +1,90 @@
+-------------------------------------------------------------------------------slip 5_1 7_1 18_1----------------------------------------------------------------------------------------------------------------------------------
+<html>
+    <head>
+        <style>
+            nav{
+                height: 50px;
+                width: 1000px;
+                background-color: lightgreen;
+            }
+            .home {
+                font-size: 22px;
+            }
+            .java{
+                font-size: 22px;
+                margin: 10px;
+            }
+            .html{
+                font-size: 22px;
+                margin: 10px;
+            }
+            .css{
+                font-size: 22px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="#" class="home">Home</a>
+            <a href="#" class="java">Java</a>
+            <a href="#" class="html">HTML</a>
+            <a href="#" class="css">CSS</a>
+        </nav>
+    </body>
+</html>
+
+-------------------------------------------------------------------------------slip 5_2------------------------------------------------------------------------------------------------------------------------------------------------
+<html>
+    <head>
+        <!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.rtl.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.rtl.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-utilities.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-utilitiess.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-utilities.rtl.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-utilities.rtl.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.rtl.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.rtl.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.rtl.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.rtl.min.css">
+	<!-- js -->
+	<link rel="stylesheet" type="text/css" href="js/bootstrap.bundle.js">
+	<link rel="stylesheet" type="text/css" href="js/bootstrap.bundle.min.js">
+	<link rel="stylesheet" type="text/css" href="js/bootstrap.js">
+	<link rel="stylesheet" type="text/css" href="js/bootstrap.min.js">
+	<link rel="stylesheet" type="text/css" href="js/bootstrap.esm.js">
+	<link rel="stylesheet" type="text/css" href="js/bootstrap.esm.min.js">
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+            <h1>My First Bootstrap Page</h1>
+            <p>Resize the responsive page to see the effect!</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>Personal Information</h3>
+                    <p>Add your personal information.</p>
+                    <p>............</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Educational Information</h3>
+                    <p>Add your educational information.</p>
+                    <p>..........</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Job Profile</h3>
+                    <p>Add your job profile information</p>
+                    <p>.............</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
