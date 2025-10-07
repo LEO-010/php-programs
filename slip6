@@ -1,0 +1,84 @@
+-------------------------------------------------------------------------------slip 6_1------------------------------------------------------------------------------------------------------------------------------------------------
+<!-- 1.Create following Bootstrap Web Layout Design and set Header background color Blue, add 
+your College name, set Menu section background color green create menu About Us, In content 
+section add college information, background color yellow, Footer section background color red, 
+add address of college.         -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
+
+	<!-- js -->
+	<link rel="stylesheet" type="text/css" href="js/bootstrap.bundle.js">
+	<link rel="stylesheet" type="text/css" href="js/bootstrap.bundle.min.js">
+	<link rel="stylesheet" type="text/css" href="js/bootstrap.js">
+	<link rel="stylesheet" type="text/css" href="js/bootstrap.min.js">
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-12 text-center bg-info">
+			<h1>RBNB College Shrirampur</h1>
+	</div></div>
+	<div class="row">
+	<div class="col-4 bg-success">Menu</div>
+	<div class="col-8">About Us</div> 
+</div>
+	</div>	
+</body>
+</html>
+
+-------------------------------------------------------------------------------slip 6_2------------------------------------------------------------------------------------------------------------------------------------------------
+<!-- 2 .Write a menu driven program to perform various file operations. Accept filename 
+from user.                                                                                                                           
+1. Display type of file. 
+2. Display last modification time of file 
+3. Display the size of file 
+4. Delete the file -->
+<html>
+    <body>
+        <form method="post" action="#">
+            Enter file name:<input type="text" name="str"><br>
+            Enter your choice:<input type="text" name="ch"><br>
+            1)Display type of file.<br>
+            2)Display modification time of file.<br>
+            3)Display size of file.<br>
+            4)Delete file.<br>
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html>
+<?php
+$file=$_POST['str'];
+$ch=$_POST['ch'];
+switch($ch)
+{
+    case 1:$a=filetype($file);
+            echo "File type:".$a;
+        break;
+    case 2:$a=filemtime($file);
+            echo "Modification time:".$a;
+        break;
+    case 3:$a=filesize($file);
+            echo "File size".$a;
+        break;
+    case 4:if(file_exists($file))
+    {
+        unlink($file);
+    }
+    else
+    {
+        echo "File not found!";
+    }
+        break;
+}
+?>
