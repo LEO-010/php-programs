@@ -1,0 +1,57 @@
+-------------------------------------------------------------------------------slip 3_1------------------------------------------------------------------------------------------------------------------------------------------------
+<!-- 1. Write a program using html with following CSS specifications                                   
+1.The background colour of the company name should be in green. 
+2.The text colour of the company name should be red. 
+3.The heading should be large –with font ''comic sans ms'' 
+4.The description of the company should be displayed in blue color in a paragraph.   -->
+<html>
+    <body>
+        <h1 style="background-color: green;color:red;font-style:comic sans ms;">Capgemini</h1>
+        <p style="color: blue;">Capgemini SE is a French multinational information technology (IT) services and consulting company, headquartered in Paris, France</p>
+    </body>
+</html>
+-------------------------------------------------------------------------------slip 3_2 9_2-----------------------------------------------------------------------------------------------------------------------------------------
+<!-- 2. Write a PHP script for the following: Design a form having a text box and a drop down list 
+containing any 3 separators(e.g. #, |, %, @, ! or comma) accept a strings from the user and also 
+a separator. 
+1. Split the string into separate words using the given separator. 
+2. Replace all the occurrences of separator in the given string with some other separator. 
+3. Find the last word in the given string.  -->
+<html>
+<body>
+<form method="post" action="#">
+    Enter a string:<input type="text" name="str"><br><br>
+    Select a seperator:<select name="sep">
+        <option value="#">#</option>
+        <option value="|">|</option>
+        <option value="%">%</option>
+        <option value="@">@</option>
+        <option value="!">!</option>
+        <option value=",">,</option>
+    </select><br><br>
+    <input type="radio" name="r" value="1">Split string into seperate words using the given separator.<br>
+    <input type="radio" name="r" value="2">Replace all occurance of seperator in the given string with some other seperator.<br>
+    <input type="radio" name="r" value="3">Find the last word in the given string.<br>
+    <input type="submit" value="submit">
+</form>    
+</body>
+</html>
+<?php
+$string =$_POST['str'];
+$sep=$_POST['sep'];
+$ch=$_POST['r'];
+switch($ch)
+{
+    case 1:$words=explode($sep,$string);
+            print_r($words);
+        break;
+    case 2:$new="*";
+        $string=str_replace($sep,$new,$string);
+        echo $string;
+        break;
+    case 3:$last=strrchr($string,$sep);
+            echo $last;
+        break;
+}
+?>
+
