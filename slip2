@@ -1,0 +1,61 @@
+-----------------------------------------------------------------------------------slip 2_1 -----------------------------------------------------------------------------------------------------------------------------------------
+<html>
+    <body style="background-color: pink;">
+    <h1 style="text-align: center; font-size:30px;color:blue;">Vaijapur</h1>
+    <p style="color: green;font-style:italic;font-size:22px;">Narangi Sarangi Dam</p>
+    <p style="color: blueviolet;font-style:oblique;font-size:24px;">Murari Park</p>
+    <p style="color:crimson;font-style:arial;font-size:26px;">Station Road</p>
+    <p style="color:brown;font-style:monospace;font-size:28px;">V P College</p>
+    <img src="Screenshot_20240514-121150_Google.jpg">
+    </body>
+</html>
+
+-----------------------------------------------------------------------------------slip 2_2-------------------------------------------------------------------------------------------------------------------------------------------
+<!-- 2 .Write a PHP script to accept 2 strings from the user, the first string should be a  sentence and 
+second can be a word.                                                                                           
+1. Delete a small part from first string after accepting position and number of characters to 
+remove. 
+2. Insert the given small string in the given big string at specified position without 
+removing any characters from the big string. 
+3. Replace some characters/ words from given big string with the given small string at 
+specified position. 
+4. Replace all the characters from the big string with the small string after a specified 
+position. 
+(Use substr_replace() function)                   -->
+<html>
+    <body>
+        <form method="POST" action="#">
+        Enter First String:<input type="text" name="s1"><br>
+        Enter Second String:<input type="text" name="s2"><br>
+        Enter Position:<input type="text" name="s3"><br>
+        Enter no. of characters:<input type="text" name="s4"><br>
+        <input type="radio" name="r" value="1">Delete small part.<br>
+        <input type="radio" name="r" value="2">Insert small string.<br>
+        <input type="radio" name="r" value="3">Replace some characters from BIG to SMALL<br>
+        <input type="radio" name="r" value="4">Replace all chaarcters from BIG to SMALL.<br>
+        <input type="submit" name="s" value="Proceed">
+        </form>
+    </body>
+</html>
+<?php
+$str1=$_POST['s1'];
+$str2=$_POST['s2'];
+$pos=$_POST['s3'];
+$char=$_POST['s4'];
+$ch=$_POST['r'];
+switch($ch)
+{
+    case 1:$str=substr_replace($str1,$str2,$pos,$char);
+            echo $str;
+        break;
+    case 2:$str=substr_replace($str1,$str2,$pos,0);
+            echo $str;
+        break;
+    case 3:$str=substr_replace($str1,$str2,$pos,$char);
+            echo $str;
+        break;
+    case 4:$str=substr_replace($str1,$str2,$pos);
+            echo $str;
+        break;
+}
+?>
