@@ -1,0 +1,47 @@
+-------------------------------------------------------------------------------slip 4_1 12_1 24_1 26_1-------------------------------------------------------------------------------------------------------------------------
+<!-- 1. Write a PHP program to read two file names from user and copy the content of first file 
+into second file.    -->
+<?php
+$f1=fopen("file1.txt","r");
+$f2=fopen("file2.txt","w");
+while(!feof($f1))
+{
+    $read=fgets($f1);
+}
+fputs($f2,$read,10);
+echo "File copied..";
+?>
+
+-------------------------------------------------------------------------------slip 4_2 24_2----------------------------------------------------------------------------------------------------------------------------------------
+<!-- 2 .Write a HTML code, which generate the following output             -->
+ <html>
+    <body>
+            <table border="1">
+                <tr colspan="3">
+                    <th>List of Books</th>
+                </tr>
+                <tr>
+                    <th rowspan="2">Item No</th>
+                    <th rowspan="2">Item Name</th>
+                    <th colspan="2">Price</th>
+                    <tr>
+                        <th>Rs.</th>
+                        <th>Paise</th>
+                    </tr>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Programming in Java</td>
+                    <td>500</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Programming in Python</td>
+                    <td>345</td>
+                    <td>00</td>
+                </tr>
+            </table>
+    </body>
+ </html>
+
