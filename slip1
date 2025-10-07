@@ -1,0 +1,75 @@
+---------------------------------------------------------slip1_1 & 27_1----------------------------------------------------------------------------------
+<!-- 1. Write a PHP script having 3 textboxes. The first textbox should be for accepting name of the 
+student, second for accepting name of college and third for accepting a proper greeting message. 
+Write a function for accepting all the three parameters and generating a proper greeting 
+message. If any of the parameters are not passed, generate the proper greeting message.(Use the 
+concept of missing parameters)   -->
+<html>
+    <body>
+        <form method="post" action="#">
+        Enter student name:<input type="text" name="t1"><br>
+        Enter college name:<input type="text" name="t2"><br>
+        Enter greeting message:<input type="text" name="t3"><br>
+        <input type="submit" value="submit">
+        </form>
+    </body>
+</html>
+<?php
+$a1=$_POST['t1'];
+$a2=$_POST['t2'];
+$a3=$_POST['t3'];
+function display($a3,$a1,$a2)
+{
+    if(($a3 or $a1 or $a2) ==null)
+    {
+        echo "Welcome";
+    }
+    else
+    {
+        echo $a3." ".$a1." from ".$a2;
+    }
+}
+display($a3,$a1,$a2);
+?>
+
+-------------------------------------------------------------slip 1_2------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<html>
+    <head>
+        <style>
+            .h1{
+                color:red;
+                font-size: 24px;
+            }
+            .div{
+                height: 500px;
+                width: 500px;
+                background-color: yellow;
+            }
+            .btn
+            {
+                background-color: green;height:30px;width:60px;color:white;
+            }
+            .btn2
+            {
+                background-color:blue;color:white; height:30px;width:50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="h1">Project Management</h1>
+        <div  class="div">
+            Project Name<input type="text" placeholder="project name"><br><br>
+            Assigned To<select>
+                <option value="">Er Merry Petison</option>
+                <option value="">Er John Edison</option>
+            </select>
+            <br><br>
+            Start Date<input type="date"><br><br>
+            End Date<input type="date"><br><br>
+            Priority<input type="radio">High<input type="radio">Average<input type="radio">Low<br><br>
+            Description<textarea></textarea><br><br>
+            <button class="btn">Submit</button>&nbsp;&nbsp; <button class="btn2">Clear</button>
+        </div>
+    </body>
+</html>
+
