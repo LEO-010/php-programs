@@ -1,0 +1,69 @@
+-------------------------------------------------------------------------------slip 8_1------------------------------------------------------------------------------------------------------------------------------------------------
+<!-- 1. Using regular expressions check for the validity of entered email-id.                          
+1. The @ symbol should not appear more than once. 
+2. The dot (.) can appear at the most once before @ and at the most twice or at least once 
+after @ symbol. 
+3. The substring before @ should not begin with a digit or underscore or dot or @ or any 
+other special character. (Use explode and preg_match function.)   -->
+<html>
+    <body>
+        <form method="post" action="#">
+        Enter email:<input type="text" name="email">     
+        <input type="submit" value="submit">                                                                                                                                                                                                                                                                                               
+        </form>
+    </body>
+</html>
+<?php
+$ch=$_POST['email'];
+if(preg_match("^[-a-z-0-9-]+(\.[a-z0-9-]+)*@[a-z0-9-]+(\.[a-z]{2,3})$^",$ch))
+{
+    echo "Email is valid..!";
+}
+else
+{
+    echo "Email is not valid...!";
+}
+?>
+
+-------------------------------------------------------------------------------slip 8_2------------------------------------------------------------------------------------------------------------------------------------------------
+<!-- 2.Design an HTML form to accept two strings from the user. Write a PHP script for the         
+following. 
+1. Find whether the small string appears at the start of the large string. 
+2. Find the position of the small string in the big string. 
+3. Compare both the string for first n characters, also the comparison should not be case 
+sensitive.    -->
+<html>
+    <body>
+        <form method="post" action="#">
+        Enter first string:<input type="text" name="str1"><br>
+        Enter second string:<input type="text" name="str2"><br>
+        Enter your choice:<input type="text" name="ch"><br>
+        1)Small string appear at start<br>
+        2)Position of small string<br>
+        3)Compare both strings<br>
+        <input type="submit" value="submit">
+        </form>
+    </body>
+</html>
+<?php
+$s1=$_POST['str1'];
+$s2=$_POST['str2'];
+$ch=$_POST['ch'];
+switch($ch)
+{
+    case 1:$pos=strpos($s1,$s2);
+    if($pos!=0)
+        echo "String2 not present at start of string1";
+    else
+        echo "String2 present at start of string1";
+        break;
+    case 2:$pos=strpos($s1,$s2);
+            echo $pos;
+        break;
+    case 3:$pos=strcasecmp($s1,$s2);
+            echo $pos;
+        break;
+
+}
+?>
+
